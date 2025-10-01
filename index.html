@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Pro - Gaming Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2 class="brand-text">GameHub Pro</h2>
+            </div>
+            <ul class="nav-links">
+                <li><button class="nav-btn active" data-page="home">Home</button></li>
+                <li><button class="nav-btn" data-page="library">Library</button></li>
+                <li><button class="nav-btn" data-page="store">Store</button></li>
+                <li><button class="nav-btn" data-page="profile">Profile</button></li>
+                <li><button class="nav-btn" data-page="leaderboards">Leaderboards</button></li>
+                <li><button class="nav-btn" data-page="settings">Settings</button></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <div class="page active" id="home-page">
+                <section class="hero-section">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Welcome Back, <span class="user-name">GamerPro</span></h1>
+                        <p class="hero-subtitle">Ready to dominate the gaming world?</p>
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">156</span>
+                                <span class="stat-label">Games</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">1,247</span>
+                                <span class="stat-label">Hours</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">342</span>
+                                <span class="stat-label">Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="featured-section">
+                    <h2 class="section-title">Featured Games</h2>
+                    <div class="featured-carousel" id="featured-carousel">
+                        <!-- Featured games will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <section class="recent-activity">
+                    <h2 class="section-title">Recent Activity</h2>
+                    <div class="activity-feed" id="activity-feed">
+                        <!-- Activity feed will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <section class="news-section">
+                    <h2 class="section-title">Gaming News</h2>
+                    <div class="news-grid" id="news-grid">
+                        <!-- News will be populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Library Page -->
+            <div class="page" id="library-page">
+                <div class="page-header">
+                    <h1 class="page-title">Game Library</h1>
+                    <div class="library-controls">
+                        <input type="text" class="search-bar" placeholder="Search your games..." id="game-search">
+                        <select class="filter-select" id="genre-filter">
+                            <option value="">All Genres</option>
+                        </select>
+                        <select class="filter-select" id="sort-filter">
+                            <option value="recent">Recently Played</option>
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="playtime">Playtime</option>
+                            <option value="completion">Completion</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="games-grid" id="games-grid">
+                    <!-- Games will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Store Page -->
+            <div class="page" id="store-page">
+                <div class="page-header">
+                    <h1 class="page-title">Game Store</h1>
+                    <input type="text" class="search-bar" placeholder="Discover new games..." id="store-search">
+                </div>
+                
+                <section class="store-featured">
+                    <h2 class="section-title">Featured Games</h2>
+                    <div class="store-carousel" id="store-carousel">
+                        <!-- Store featured games will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <section class="genres-section">
+                    <h2 class="section-title">Browse by Genre</h2>
+                    <div class="genres-grid" id="genres-grid">
+                        <!-- Genres will be populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Profile Page -->
+            <div class="page" id="profile-page">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100x100/6366f1/white?text=GP" alt="Profile Avatar" id="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">GamerPro</h1>
+                        <div class="profile-level">
+                            <span class="level-text">Level 42</span>
+                            <div class="xp-bar">
+                                <div class="xp-fill" style="width: 68%"></div>
+                            </div>
+                            <span class="xp-text">15,840 / 23,200 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-sections">
+                    <section class="stats-section">
+                        <h2 class="section-title">Gaming Statistics</h2>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <h3>Total Playtime</h3>
+                                <p class="stat-value">1,247 hours</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3>Games Owned</h3>
+                                <p class="stat-value">156</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3>Achievements</h3>
+                                <p class="stat-value">342</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3>Current Rank</h3>
+                                <p class="stat-value">#3</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="achievements-section">
+                        <h2 class="section-title">Achievements</h2>
+                        <div class="achievements-grid" id="achievements-grid">
+                            <!-- Achievements will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Leaderboards Page -->
+            <div class="page" id="leaderboards-page">
+                <div class="page-header">
+                    <h1 class="page-title">Leaderboards</h1>
+                    <select class="filter-select">
+                        <option value="global">Global Rankings</option>
+                        <option value="friends">Friends Only</option>
+                        <option value="weekly">This Week</option>
+                        <option value="monthly">This Month</option>
+                    </select>
+                </div>
+                <div class="leaderboard-container" id="leaderboard-container">
+                    <!-- Leaderboard will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div class="page" id="settings-page">
+                <div class="page-header">
+                    <h1 class="page-title">Settings</h1>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-tabs">
+                        <button class="tab-btn active" data-tab="graphics">Graphics</button>
+                        <button class="tab-btn" data-tab="audio">Audio</button>
+                        <button class="tab-btn" data-tab="account">Account</button>
+                        <button class="tab-btn" data-tab="privacy">Privacy</button>
+                    </div>
+                    
+                    <div class="settings-content">
+                        <div class="tab-content active" id="graphics-tab">
+                            <h3>Graphics Settings</h3>
+                            <div class="setting-item">
+                                <label>Resolution</label>
+                                <select class="form-control">
+                                    <option>1920x1080</option>
+                                    <option>2560x1440</option>
+                                    <option>3840x2160</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>Graphics Quality</label>
+                                <input type="range" class="slider" min="1" max="5" value="4">
+                                <span class="slider-value">Ultra</span>
+                            </div>
+                            <div class="setting-item">
+                                <label>V-Sync</label>
+                                <input type="checkbox" class="toggle" checked>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="audio-tab">
+                            <h3>Audio Settings</h3>
+                            <div class="setting-item">
+                                <label>Master Volume</label>
+                                <input type="range" class="slider" min="0" max="100" value="75">
+                                <span class="slider-value">75%</span>
+                            </div>
+                            <div class="setting-item">
+                                <label>Music Volume</label>
+                                <input type="range" class="slider" min="0" max="100" value="60">
+                                <span class="slider-value">60%</span>
+                            </div>
+                            <div class="setting-item">
+                                <label>SFX Volume</label>
+                                <input type="range" class="slider" min="0" max="100" value="80">
+                                <span class="slider-value">80%</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="account-tab">
+                            <h3>Account Settings</h3>
+                            <div class="setting-item">
+                                <label>Username</label>
+                                <input type="text" class="form-control" value="GamerPro">
+                            </div>
+                            <div class="setting-item">
+                                <label>Email</label>
+                                <input type="email" class="form-control" value="gamerpro@email.com">
+                            </div>
+                            <div class="setting-item">
+                                <button class="btn btn--secondary">Change Password</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="privacy-tab">
+                            <h3>Privacy Settings</h3>
+                            <div class="setting-item">
+                                <label>Profile Visibility</label>
+                                <select class="form-control">
+                                    <option>Public</option>
+                                    <option>Friends Only</option>
+                                    <option>Private</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>Show Online Status</label>
+                                <input type="checkbox" class="toggle" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>Allow Friend Requests</label>
+                                <input type="checkbox" class="toggle" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Game Details Modal -->
+    <div class="modal hidden" id="game-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
